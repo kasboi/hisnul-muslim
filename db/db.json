@@ -1,30 +1,159 @@
 {
-  "dua": [
-    { "id": 1, "dua": [
-      {
-          "id": 1,
-          "arabic": "الحَمْـدُ لِلّهِ الّذي أَحْـيانا بَعْـدَ م أَماتَـنا وَإليه النُّـشور",
-          "transliteration":
-              "Alhamdu lillahil-lathee ahvana baAAda ma amatana wa-ilavhin-nushoor",
-          "translation":
-              "All praise is for Allah who gave us life after having taken it from us and unto Him is the resurrection."
-      },
-      {
-          "id": 2,
-          "arabic": "لا إلهَ إلاّ اللّهُ وَحْـدَهُ لا شَـريكَ له، لهُ المُلـكُ ولهُ الحَمـد، وهوَ على كلّ شيءٍ قدير، سُـبْحانَ اللهِ، والحمْـدُ لله ، ولا إلهَ إلاّ اللهُ واللهُ أكبَر، وَلا حَولَ وَلا قوّة إلاّ باللّهِ العليّ العظيم رَبِّ اغْفرْ لي",
-          "transliteration":
-              "La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shay-in qadeer, subhanal-lah, walhamdu lillah, wala ilaha illal-lah wallahu akbar, wala hawla wala quwwata illa billahil-AAaliyyil AAatheem.",
-          "translation":
-              "None has the right to be worshipped except Allah, alone without associate, to Him belongs sovereignty and praise and He is over all things wholly capable. How perfect Allah is, and all praise is for Allah, and none has the right to be worshipped except Allah, Allah is the greatest and there is no power nor might except with Allah, The Most High, The Supreme. O my Lord forgive me."
-      },
-      {
-          "id": 3,
-          "arabic": "الحمدُ للهِ الذي عافاني في جَسَدي وَرَدّ عَليّ روحي وَأَذِنَ لي بِذِكْرِه",
-          "transliteration":
-              "Alhamdu lillahil-lathee AAafanee fee jasadee waradda AAalayya roohee wa-athina lee bithikrih",
-          "translation":
-              "All praise is for Allah who restored to me my health and returned my soul and has allowed me to remember Him."
-      }
-  ]}
-  ]
+    "dua": [
+        {
+            "id": 1,
+            "title": "When waking up",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "الحَمْـدُ لِلّهِ الّذي أَحْـيانا بَعْـدَ م أَماتَـنا وَإليه النُّـشور",
+                    "transliteration": "Alhamdu lillahil-lathee ahvana baAAda ma amatana wa-ilavhin-nushoor",
+                    "translation": "All praise is for Allah who gave us life after having taken it from us and unto Him is the resurrection."
+                },
+                {
+                    "id": 2,
+                    "arabic": "لا إلهَ إلاّ اللّهُ وَحْـدَهُ لا شَـريكَ له، لهُ المُلـكُ ولهُ الحَمـد، وهوَ على كلّ شيءٍ قدير، سُـبْحانَ اللهِ، والحمْـدُ لله ، ولا إلهَ إلاّ اللهُ واللهُ أكبَر، وَلا حَولَ وَلا قوّة إلاّ باللّهِ العليّ العظيم رَبِّ اغْفرْ لي",
+                    "transliteration": "La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shay-in qadeer, subhanal-lah, walhamdu lillah, wala ilaha illal-lah wallahu akbar, wala hawla wala quwwata illa billahil-AAaliyyil AAatheem.",
+                    "translation": "None has the right to be worshipped except Allah, alone without associate, to Him belongs sovereignty and praise and He is over all things wholly capable. How perfect Allah is, and all praise is for Allah, and none has the right to be worshipped except Allah, Allah is the greatest and there is no power nor might except with Allah, The Most High, The Supreme. O my Lord forgive me."
+                },
+                {
+                    "id": 3,
+                    "arabic": "الحمدُ للهِ الذي عافاني في جَسَدي وَرَدّ عَليّ روحي وَأَذِنَ لي بِذِكْرِه",
+                    "transliteration": "Alhamdu lillahil-lathee AAafanee fee jasadee waradda AAalayya roohee wa-athina lee bithikrih",
+                    "translation": "All praise is for Allah who restored to me my health and returned my soul and has allowed me to remember Him."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Supplication when wearing a garment",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "الحمدُ للهِ الّذي كَساني هذا (الثّوب) وَرَزَقَنيه مِنْ غَـيـْرِ حَولٍ مِنّي وَلا قـوّة",
+                    "transliteration": "Alhamdu lillahil-lathee kasanee hatha (aththawb) warazaqaneehi min ghayri hawlin minnee wala quwwah",
+                    "translation": "All Praise is for Allah who has clothed me with this garment and provided it for me, with no power nor might from myself"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Supplication when wearing a new garment",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "اللّهُـمَّ لَـكَ الحَـمْـدُ أنْـتَ كَسَـوْتَنيهِ، أََسْأََلُـكَ مِـنْ خَـيرِهِ وَخَـيْرِ مَا صُنِعَ لَـه، وَأَعوذُ بِكَ مِـنْ شَـرِّهِ وَشَـرِّ مـا صُنِعَ لَـهُ",
+                    "transliteration": "Allahumma lakal-hamdu anta kasawtaneeh, as-aluka min khayrihi wakhayri ma suniAAa lah, wa-aAAoothu bika min sharrihi washarri ma suniAAa lah.",
+                    "translation": "O Allah, for You is all praise, You have clothed me with it (i.e. the garment), I ask You for the good of it and the good for which it was made, and I seek refuge with You from the evil of it and the evil for which it was made."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Supplication said to someone wearing a new garment",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "تُبْـلي وَيُـخْلِفُ اللهُ تَعَالى",
+                    "transliteration": "Tublee wayukhliful-lahu taAAala",
+                    "translation": "May you wear it out and Allah تعالى replace it (with another). The intended meaning: A supplication for long life."
+                },
+                {
+                    "id": 2,
+                    "arabic": "اِلبَـس جَديـداً وَعِـشْ حَمـيداً وَمُـتْ شهيداً",
+                    "transliteration": "Ilbas jadeedan waAAish hameedan wamut shaheedan.",
+                    "translation": "Wear anew, live commendably and die a shaheed."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Before undressing",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "بِسْمِ الله",
+                    "transliteration": "Bismil-lah",
+                    "translation": "In the name of Allah."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Before entering the toilet",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": " اللّهُـمَّ إِنِّـي أَعـوذُ بِـكَ مِـنَ الْخُـبْثِ وَالْخَبائِث (بِسْمِ الله)",
+                    "transliteration": "(Bismil-lah) allahumma innee aAAoothu bika minal-khubthi wal-khaba-ith",
+                    "translation": "(In the name of Allah). O Allah, I take refuge with you from all evil and evil-doers."
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "After leaving the toilet",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "غُفْـرانَك",
+                    "transliteration": "Ghufranak",
+                    "translation": "I ask You (Allah) for forgiveness."
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "When starting ablution",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "بِسْمِ الله",
+                    "transliteration": "Bismil-lah",
+                    "translation": "In the name of Allah."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Upon completing the ablution",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "أَشْهَدُ أَنْ لا إِلَـهَ إِلاّ اللهُ وَحْدَهُ لا شَريـكَ لَـهُ وَأَشْهَدُ أَنَّ مُحَمّـداً عَبْـدُهُ وَرَسـولُـه",
+                    "transliteration": "Ashhadu an la ilaha illal-lahu wahdahu la shareeka lah, wa-ashhadu anna Muhammadan AAabduhu warasooluh.",
+                    "translation": "I bear witness that none has the right to be worshipped except Allah, alone without partner, and I bear witness that Muhammad is His slave and Messenger."
+                },
+                {
+                    "id": 2,
+                    "arabic": "اللّهُـمَّ اجْعَلنـي مِنَ التَّـوّابينَ وَاجْعَـلْني مِنَ المتَطَهّـرين",
+                    "transliteration": "Allahummaj-AAalnee minat-tawwabeena wajAAalnee minal-mutatahhireen.",
+                    "translation": "O Allah, make me of those who return to You often in repentance and make me of those who remain clean and pure."
+                },                {
+                    "id": 3,
+                    "arabic": "سُبْحـانَكَ اللّهُـمَّ وَبِحَمدِك أَشْهَـدُ أَنْ لا إِلهَ إِلاّ أَنْتَ أَسْتَغْفِرُكَ وَأَتوبُ إِلَـيْك",
+                    "transliteration": "Subhanakal-lahumma wabihamdika ashhadu an la ilaha illa anta astaghfiruka wa-atoobu ilayk.",
+                    "translation": "How perfect You are O Allah, and I praise You, I bear witness that none has the right to be worshipped except You, I seek Your forgiveness and turn in repentance to You."
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "When leaving the home",
+            "dua": [
+                {
+                    "id": 1,
+                    "arabic": "بِسْمِ اللهِ ، تَوَكَّلْـتُ عَلى اللهِ وَلا حَوْلَ وَلا قُـوَّةَ إِلاّ بِالله",
+                    "transliteration": "Bismil-lah, tawakkaltu AAalal-lah, wala hawla wala quwwata illa billah.",
+                    "translation": "In the name of Allah, I place my trust in Allah, and there is no might nor power except with Allah."
+                },
+                {
+                    "id": 2,
+                    "arabic": "اللّهُـمَّ إِنِّـي أَعـوذُ بِكَ أَنْ أَضِـلَّ أَوْ أُضَـل ، أَوْ أَزِلَّ أَوْ أُزَل ، أَوْ أَظْلِـمَ أَوْ أَُظْلَـم ، أَوْ أَجْهَلَ أَوْ يُـجْهَلَ عَلَـيّ",
+                    "transliteration": "Allahumma innee aAAoothu bika an adilla aw odal, aw azilla aw ozall, aw athlima aw othlam, aw ajhala aw yujhala AAalay",
+                    "translation": "O Allah, I take refuge with You lest I should stray or be led astray, or slip or be tripped, or oppress or be oppressed, or behave foolishly or be treated foolishly. Slip: i.e. to commit a sin unintentionally"
+                }
+            ]
+        }
+    ]
 }
