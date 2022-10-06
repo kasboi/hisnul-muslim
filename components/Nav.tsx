@@ -3,6 +3,7 @@ import { HamburgerIcon, MoonIcon, SearchIcon, SettingsIcon, SunIcon } from "@cha
 import {
     Box,
     Button,
+    Divider,
     Flex,
     IconButton,
     Spacer,
@@ -14,18 +15,20 @@ import Image from "next/image"
 import logo from "../assets/logo.png"
 import logo_dark from "../assets/logo-dark.png"
 
-import { useRef } from "react"
+import { ReactElement, useRef } from "react"
 import Slides from "./Drawer"
-
-const Navbar: NextPage = () => {
+type Props = {
+    children: ReactElement
+}
+const Navbar: NextPage<Props> = ({ children }) => {
     const { isOpen, onClose, onOpen } = useDisclosure()
     const btnRef = useRef<any>()
     const { colorMode, toggleColorMode } = useColorMode()
     return (
         <>
-            <Flex align="center" px={4}>
+            <Flex align="center" px={4} py={2} >
                 <Box>
-                    <Image src={colorMode === 'light' ? logo : logo_dark} alt="logo" width={125}/>
+                    {/* <Image src={colorMode === 'light' ? logo : logo_dark} alt="logo" width={125}/> */}
                 </Box>
                 <Spacer />
                 <IconButton
@@ -42,7 +45,9 @@ const Navbar: NextPage = () => {
                     ref={btnRef}
                 />
             </Flex>
+            <Divider borderWidth={1}/>
             <Slides onClose={onClose} isOpen={isOpen} />
+            {children}
         </>
     )
 }

@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import NextLink from "next/link"
 import {
     Drawer,
     DrawerOverlay,
@@ -9,12 +10,17 @@ import {
     DrawerHeader,
     Button,
     Input,
+    Text,
+    VStack,
+    Heading,
+    Divider,
+    Link,
 } from "@chakra-ui/react"
 import { useRef } from "react"
 
 type Props = {
-  isOpen: boolean,
-  onClose: () => void,
+    isOpen: boolean
+    onClose: () => void
 }
 
 const Slides: NextPage<Props> = ({ isOpen, onClose }) => {
@@ -31,7 +37,19 @@ const Slides: NextPage<Props> = ({ isOpen, onClose }) => {
                 <DrawerHeader>Create your account</DrawerHeader>
 
                 <DrawerBody>
-                    <Input placeholder="Type here..." />
+                    <VStack spacing={4} onClick={onClose}>
+                        <NextLink href="/" passHref>
+                            <Link><Text fontSize='xl'>Home</Text></Link>
+                        </NextLink>
+                        <Divider />
+                        <NextLink href="#" passHref>
+                            <Link><Text fontSize='xl'>About</Text></Link>
+                        </NextLink>
+                        <Divider />
+                        <NextLink href="#" passHref>
+                            <Link><Text fontSize='xl'>Contact</Text></Link>
+                        </NextLink>
+                    </VStack>
                 </DrawerBody>
 
                 <DrawerFooter>

@@ -1,8 +1,10 @@
+import { useState } from "react"
 import { PhoneIcon, SearchIcon } from "@chakra-ui/icons"
 import {
     Box,
     Container,
     Divider,
+    Fade,
     Input,
     InputGroup,
     InputLeftElement,
@@ -12,6 +14,7 @@ import type { NextPage } from "next"
 import Head from "next/head"
 import Categories from "../components/Categories"
 import Chapters from "../components/Chapters"
+import Dua from "../components/Dua"
 import Navbar from "../components/Nav"
 
 const Home: NextPage = () => {
@@ -26,8 +29,6 @@ const Home: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navbar />
-            <Divider />
             <Container maxW={["sm", "2xl"]} my={4}>
                 <InputGroup>
                     <InputLeftElement
@@ -37,8 +38,9 @@ const Home: NextPage = () => {
                     <Input type="search" placeholder="search dua" />
                 </InputGroup>
             </Container>
-            {/* <Categories /> */}
-            <Chapters />
+            <Categories />
+            {/* <Chapters /> */}
+            {/* <Dua /> */}
         </Box>
     )
 }
