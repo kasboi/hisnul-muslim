@@ -3,21 +3,21 @@ import {
     Box,
     Container,
     Divider,
-    Flex,
     Input,
     InputGroup,
     InputLeftElement,
-    SimpleGrid,
     useDisclosure,
 } from "@chakra-ui/react"
 import type { NextPage } from "next"
 import Head from "next/head"
+import Categories from "../components/Categories"
+import Chapters from "../components/Chapters"
 import Navbar from "../components/Nav"
 
 const Home: NextPage = () => {
     const { isOpen, onClose, onOpen } = useDisclosure()
     return (
-        <Box mt={2}>
+        <Box pt={2} pb={8}>
             <Head>
                 <title>Citadel of the Believer</title>
                 <meta
@@ -37,14 +37,8 @@ const Home: NextPage = () => {
                     <Input type="search" placeholder="search dua" />
                 </InputGroup>
             </Container>
-            <SimpleGrid columns={[2,3]} spacing={10} mx={[4,4,12]} mt={6} >
-                <Flex bg="red.400" height="100px" borderRadius={10}></Flex>
-                <Flex bg="blue.400" height="100px" borderRadius={10}></Flex>
-                <Flex bg="yellow.400" height="100px" borderRadius={10}></Flex>
-                <Flex bg="teal.400" height="100px" borderRadius={10}></Flex>
-                <Flex bg="tomato" height="100px" borderRadius={10}></Flex>
-                <Flex bg="purple.400" height="100px" borderRadius={10}></Flex>
-            </SimpleGrid>
+            {/* <Categories /> */}
+            <Chapters />
         </Box>
     )
 }

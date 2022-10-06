@@ -12,6 +12,8 @@ import {
 } from "@chakra-ui/react"
 import Image from "next/image"
 import logo from "../assets/logo.png"
+import logo_dark from "../assets/logo-dark.png"
+
 import { useRef } from "react"
 import Slides from "./Drawer"
 
@@ -23,21 +25,8 @@ const Navbar: NextPage = () => {
         <>
             <Flex align="center" px={4}>
                 <Box>
-                    <Image src={logo} alt="logo" width={125}/>
+                    <Image src={colorMode === 'light' ? logo : logo_dark} alt="logo" width={125}/>
                 </Box>
-                <Spacer />
-                {/* <Button
-                    leftIcon={<SearchIcon />}
-                    boxShadow="xs"
-                    w={["45%", "60%"]}
-                    color="gray.500"
-                    shadow="base"
-                    overflow='hidden'
-                >
-                    <Text w="full" fontSize="md" fontWeight="normal">
-                        Search the doc
-                    </Text>
-                </Button> */}
                 <Spacer />
                 <IconButton
                     variant="ghost"
