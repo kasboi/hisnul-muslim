@@ -33,8 +33,8 @@ const Chapters: NextPage = () => {
             <Heading as="h2" size="2xl">
                 <Center my={[6, 10, 12]}>Choose Dua</Center>
                 <VStack spacing={16} align='flex-start'>
-                    {chaps.map((item) => (
-                        <HStack spacing={[4,6]}>
+                    {chaps.map((item, i) => (
+                        <HStack spacing={[4,6]} key={i}>
                             <Tag size={'sm'}>{item.id}</Tag>
                             <Text fontSize="lg">
                                 {item.name}

@@ -36,11 +36,11 @@ const Chapters: NextPage = () => {
             <Heading as="h2" size="2xl">
                 <Center my={[6, 10, 12]}>Choose Dua</Center>
                 <VStack spacing={16} align="flex-start">
-                    {chaps.map((item) => (
-                        <LinkBox as="article">
+                    {chaps.map((item, i) => (
+                        <LinkBox as="article" key={i}>
                             <HStack spacing={[4, 6]}>
                                 <Tag size={"sm"}>{item.id}</Tag>
-                                <NextLink href="/dua" passHref>
+                                <NextLink href={`/dua/${item.id}`} passHref>
                                     <LinkOverlay>
                                         <Text fontSize="lg">{item.name}</Text>
                                     </LinkOverlay>

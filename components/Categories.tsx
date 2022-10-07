@@ -32,8 +32,8 @@ const Categories: NextPage = () => {
             mx={[12, 4, 12, 24]}
             mt={6}
         >
-            {categories.map((item) => (
-                <LinkBox as="article">
+            {categories.map((item, i) => (
+                <LinkBox as="article" key={i}>
                     <Flex
                         bg={item.color}
                         height="120px"

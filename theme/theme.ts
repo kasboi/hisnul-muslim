@@ -18,7 +18,7 @@ const theme = extendTheme({
             // you can also use responsive styles
             fontSize: ["22px", "28px"],
             fontWeight: "400",
-            lineHeight: "125%",
+            lineHeight: "175%",
             letterSpacing: "2%",
         },
     },
