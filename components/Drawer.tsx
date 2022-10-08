@@ -42,8 +42,8 @@ const Slides: NextPage<Props> = ({ isOpen, onClose }) => {
                             <Link><Text fontSize='xl'>Home</Text></Link>
                         </NextLink>
                         <Divider />
-                        <NextLink href="#" passHref>
-                            <Link><Text fontSize='xl'>About</Text></Link>
+                        <NextLink href="/chapters" passHref>
+                            <Link><Text fontSize='xl'>Chapters</Text></Link>
                         </NextLink>
                         <Divider />
                         <NextLink href="#" passHref>

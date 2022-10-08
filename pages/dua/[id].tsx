@@ -1,5 +1,14 @@
-import { Box, Divider, Heading, Text, VStack } from "@chakra-ui/react"
+import { ArrowBackIcon } from "@chakra-ui/icons"
+import {
+    Box,
+    Divider,
+    Heading,
+    IconButton,
+    Text,
+    VStack,
+} from "@chakra-ui/react"
 import { NextPage } from "next"
+import { useRouter } from "next/router"
 
 export const getStaticPaths = async () => {
     const res = await fetch("http://localhost:8000/dua/")
@@ -38,9 +47,17 @@ type Props = {
     duaName: string
 }
 const DuaList: NextPage<Props> = ({ duaList, duaName }) => {
+    const router = useRouter()
     return (
         <Box px={4} py={12}>
-            <Heading as="h2" size='lg' textAlign="center" my={8}>
+            <IconButton 
+            aria-label="back_button"
+            variant="ghost"
+            icon={<ArrowBackIcon />}
+            size='lg'
+            onClick={() => router.push('/chapters')}
+            />
+            <Heading as="h2" size="lg" textAlign="center" my={8}>
                 {duaName}
             </Heading>
             <VStack maxW={["xl"]} mx="auto" spacing={6}>
@@ -57,7 +74,7 @@ const DuaList: NextPage<Props> = ({ duaList, duaName }) => {
                             {item.arabic}
                         </Box>
                         <Text>{item.transliteration}</Text>
-                        <Divider borderWidth={1} borderColor='blackAlpha.600'/>
+                        <Divider borderWidth={1} borderColor="blackAlpha.600" />
                         <Text>{item.translation}</Text>
                     </VStack>
                 ))}
