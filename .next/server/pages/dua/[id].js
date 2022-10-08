@@ -1,144 +1,65 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 87;
-exports.ids = [87];
+exports.id = "pages/dua/[id]";
+exports.ids = ["pages/dua/[id]"];
 exports.modules = {
 
-/***/ 4281:
+/***/ "./pages/dua/[id].tsx":
+/*!****************************!*\
+  !*** ./pages/dua/[id].tsx ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
-/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4513);
-/* harmony import */ var _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8930);
-/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-const getStaticPaths = async ()=>{
-    const res = await fetch("http://localhost:8000/dua/");
-    const data = await res.json();
-    // map data to an array of path objects with params (id)
-    const paths = data.map((ninja)=>{
-        return {
-            params: {
-                id: ninja.id.toString()
-            }
-        };
-    });
-    return {
-        paths,
-        fallback: false
-    };
-};
-const getStaticProps = async (context)=>{
-    const id = context.params.id;
-    const res = await fetch("http://localhost:8000/dua/" + id);
-    const data = await res.json();
-    return {
-        props: {
-            duaList: data.dua,
-            duaName: data.title
-        }
-    };
-};
-const DuaList = ({ duaList , duaName  })=>{
-    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {
-        px: 4,
-        py: 12,
-        children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
-                "aria-label": "back_button",
-                variant: "ghost",
-                icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1__.ArrowBackIcon, {}),
-                size: "lg",
-                onClick: ()=>router.push("/chapters")
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Heading, {
-                as: "h2",
-                size: "lg",
-                textAlign: "center",
-                my: 8,
-                children: duaName
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.VStack, {
-                maxW: [
-                    "xl"
-                ],
-                mx: "auto",
-                spacing: 6,
-                children: duaList.map((item, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.VStack, {
-                        py: 4,
-                        px: 4,
-                        spacing: 4,
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {
-                                bg: "blackAlpha.500",
-                                py: 6,
-                                px: 4,
-                                borderRadius: 10,
-                                dir: "rtl",
-                                textStyle: "arabia",
-                                children: item.arabic
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {
-                                children: item.transliteration
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Divider, {
-                                borderWidth: 1,
-                                borderColor: "blackAlpha.600"
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {
-                                children: item.translation
-                            })
-                        ]
-                    }, index))
-            })
-        ]
-    });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DuaList);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getStaticPaths\": () => (/* binding */ getStaticPaths),\n/* harmony export */   \"getStaticProps\": () => (/* binding */ getStaticProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @chakra-ui/icons */ \"@chakra-ui/icons\");\n/* harmony import */ var _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @chakra-ui/react */ \"@chakra-ui/react\");\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ \"next/router\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nconst getStaticPaths = async ()=>{\n    const res = await fetch(\"http://localhost:8000/dua/\");\n    const data = await res.json();\n    // map data to an array of path objects with params (id)\n    const paths = data.map((ninja)=>{\n        return {\n            params: {\n                id: ninja.id.toString()\n            }\n        };\n    });\n    return {\n        paths,\n        fallback: false\n    };\n};\nconst getStaticProps = async (context)=>{\n    const id = context.params.id;\n    const res = await fetch(\"http://localhost:8000/dua/\" + id);\n    const data = await res.json();\n    return {\n        props: {\n            duaList: data.dua,\n            duaName: data.title\n        }\n    };\n};\nconst DuaList = ({ duaList , duaName  })=>{\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {\n        px: 4,\n        py: 12,\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.IconButton, {\n                \"aria-label\": \"back_button\",\n                variant: \"ghost\",\n                icon: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_icons__WEBPACK_IMPORTED_MODULE_1__.ArrowBackIcon, {}, void 0, false, void 0, void 0),\n                size: \"lg\",\n                onClick: ()=>router.push(\"/chapters\")\n            }, void 0, false, {\n                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                lineNumber: 53,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Heading, {\n                as: \"h2\",\n                size: \"lg\",\n                textAlign: \"center\",\n                my: 8,\n                children: duaName\n            }, void 0, false, {\n                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                lineNumber: 60,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.VStack, {\n                maxW: [\n                    \"xl\"\n                ],\n                mx: \"auto\",\n                spacing: 6,\n                children: duaList.map((item, index)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.VStack, {\n                        py: 4,\n                        px: 4,\n                        spacing: 4,\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {\n                                bg: \"blackAlpha.500\",\n                                py: 6,\n                                px: 4,\n                                borderRadius: 10,\n                                dir: \"rtl\",\n                                textStyle: \"arabia\",\n                                children: item.arabic\n                            }, void 0, false, {\n                                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                                lineNumber: 66,\n                                columnNumber: 25\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                children: item.transliteration\n                            }, void 0, false, {\n                                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                                lineNumber: 76,\n                                columnNumber: 25\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Divider, {\n                                borderWidth: 1,\n                                borderColor: \"blackAlpha.600\"\n                            }, void 0, false, {\n                                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                                lineNumber: 77,\n                                columnNumber: 25\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                children: item.translation\n                            }, void 0, false, {\n                                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                                lineNumber: 78,\n                                columnNumber: 25\n                            }, undefined)\n                        ]\n                    }, index, true, {\n                        fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                        lineNumber: 65,\n                        columnNumber: 21\n                    }, undefined))\n            }, void 0, false, {\n                fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n                lineNumber: 63,\n                columnNumber: 13\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/genkas/Documents/projects/citadel/pages/dua/[id].tsx\",\n        lineNumber: 52,\n        columnNumber: 9\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DuaList);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QUFDLGdCQUFnQjs7Ozs7eUNBQUc7MENBQ3hELDhEQUFDL0Msa0RBQUk7MENBQUVzQyxJQUFJLENBQUNVLFdBQVc7Ozs7O3lDQUFROzt1QkFiSVQsS0FBSzs7OztpQ0FjbkMsQ0FDWDs7Ozs7eUJBQ0c7Ozs7OztpQkFDUCxDQUNUO0FBQ0wsQ0FBQztBQUVELGlFQUFlakIsT0FBTyIsInNvdXJjZXMiOlsid2VicGFjazovL2NpdGFkZWwvLi9wYWdlcy9kdWEvW2lkXS50c3g/ZjMwOCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBcnJvd0JhY2tJY29uIH0gZnJvbSBcIkBjaGFrcmEtdWkvaWNvbnNcIlxuaW1wb3J0IHtcbiAgICBCb3gsXG4gICAgRGl2aWRlcixcbiAgICBIZWFkaW5nLFxuICAgIEljb25CdXR0b24sXG4gICAgVGV4dCxcbiAgICBWU3RhY2ssXG59IGZyb20gXCJAY2hha3JhLXVpL3JlYWN0XCJcbmltcG9ydCB7IE5leHRQYWdlIH0gZnJvbSBcIm5leHRcIlxuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSBcIm5leHQvcm91dGVyXCJcblxuZXhwb3J0IGNvbnN0IGdldFN0YXRpY1BhdGhzID0gYXN5bmMgKCkgPT4ge1xuICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKFwiaHR0cDovL2xvY2FsaG9zdDo4MDAwL2R1YS9cIilcbiAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKVxuXG4gICAgLy8gbWFwIGRhdGEgdG8gYW4gYXJyYXkgb2YgcGF0aCBvYmplY3RzIHdpdGggcGFyYW1zIChpZClcbiAgICBjb25zdCBwYXRocyA9IGRhdGEubWFwKChuaW5qYTogeyBpZDogeyB0b1N0cmluZzogKCkgPT4gYW55IH0gfSkgPT4ge1xuICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgcGFyYW1zOiB7IGlkOiBuaW5qYS5pZC50b1N0cmluZygpIH0sXG4gICAgICAgIH1cbiAgICB9KVxuXG4gICAgcmV0dXJuIHtcbiAgICAgICAgcGF0aHMsXG4gICAgICAgIGZhbGxiYWNrOiBmYWxzZSxcbiAgICB9XG59XG5cbmV4cG9ydCBjb25zdCBnZXRTdGF0aWNQcm9wcyA9IGFzeW5jIChjb250ZXh0OiB7IHBhcmFtczogeyBpZDogYW55IH0gfSkgPT4ge1xuICAgIGNvbnN0IGlkID0gY29udGV4dC5wYXJhbXMuaWRcbiAgICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChcImh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9kdWEvXCIgKyBpZClcbiAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKVxuXG4gICAgcmV0dXJuIHtcbiAgICAgICAgcHJvcHM6IHsgZHVhTGlzdDogZGF0YS5kdWEsIGR1YU5hbWU6IGRhdGEudGl0bGUgfSxcbiAgICB9XG59XG50eXBlIFByb3BzID0ge1xuICAgIGR1YUxpc3Q6IFtcbiAgICAgICAgaXRlbToge1xuICAgICAgICAgICAgYXJhYmljOiBzdHJpbmdcbiAgICAgICAgICAgIHRyYW5zbGl0ZXJhdGlvbjogc3RyaW5nXG4gICAgICAgICAgICB0cmFuc2xhdGlvbjogc3RyaW5nXG4gICAgICAgIH1cbiAgICBdXG4gICAgZHVhTmFtZTogc3RyaW5nXG59XG5jb25zdCBEdWFMaXN0OiBOZXh0UGFnZTxQcm9wcz4gPSAoeyBkdWFMaXN0LCBkdWFOYW1lIH0pID0+IHtcbiAgICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKVxuICAgIHJldHVybiAoXG4gICAgICAgIDxCb3ggcHg9ezR9IHB5PXsxMn0+XG4gICAgICAgICAgICA8SWNvbkJ1dHRvbiBcbiAgICAgICAgICAgIGFyaWEtbGFiZWw9XCJiYWNrX2J1dHRvblwiXG4gICAgICAgICAgICB2YXJpYW50PVwiZ2hvc3RcIlxuICAgICAgICAgICAgaWNvbj17PEFycm93QmFja0ljb24gLz59XG4gICAgICAgICAgICBzaXplPSdsZydcbiAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHJvdXRlci5wdXNoKCcvY2hhcHRlcnMnKX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8SGVhZGluZyBhcz1cImgyXCIgc2l6ZT1cImxnXCIgdGV4dEFsaWduPVwiY2VudGVyXCIgbXk9ezh9PlxuICAgICAgICAgICAgICAgIHtkdWFOYW1lfVxuICAgICAgICAgICAgPC9IZWFkaW5nPlxuICAgICAgICAgICAgPFZTdGFjayBtYXhXPXtbXCJ4bFwiXX0gbXg9XCJhdXRvXCIgc3BhY2luZz17Nn0+XG4gICAgICAgICAgICAgICAge2R1YUxpc3QubWFwKChpdGVtLCBpbmRleCkgPT4gKFxuICAgICAgICAgICAgICAgICAgICA8VlN0YWNrIHB5PXs0fSBweD17NH0gc3BhY2luZz17NH0ga2V5PXtpbmRleH0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8Qm94XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgYmc9XCJibGFja0FscGhhLjUwMFwiXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcHk9ezZ9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcHg9ezR9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyUmFkaXVzPXsxMH1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkaXI9XCJydGxcIlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRleHRTdHlsZT1cImFyYWJpYVwiXG4gICAgICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0uYXJhYmljfVxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Cb3g+XG4gICAgICAgICAgICAgICAgICAgICAgICA8VGV4dD57aXRlbS50cmFuc2xpdGVyYXRpb259PC9UZXh0PlxuICAgICAgICAgICAgICAgICAgICAgICAgPERpdmlkZXIgYm9yZGVyV2lkdGg9ezF9IGJvcmRlckNvbG9yPVwiYmxhY2tBbHBoYS42MDBcIiAvPlxuICAgICAgICAgICAgICAgICAgICAgICAgPFRleHQ+e2l0ZW0udHJhbnNsYXRpb259PC9UZXh0PlxuICAgICAgICAgICAgICAgICAgICA8L1ZTdGFjaz5cbiAgICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgIDwvVlN0YWNrPlxuICAgICAgICA8L0JveD5cbiAgICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IER1YUxpc3RcbiJdLCJuYW1lcyI6WyJBcnJvd0JhY2tJY29uIiwiQm94IiwiRGl2aWRlciIsIkhlYWRpbmciLCJJY29uQnV0dG9uIiwiVGV4dCIsIlZTdGFjayIsInVzZVJvdXRlciIsImdldFN0YXRpY1BhdGhzIiwicmVzIiwiZmV0Y2giLCJkYXRhIiwianNvbiIsInBhdGhzIiwibWFwIiwibmluamEiLCJwYXJhbXMiLCJpZCIsInRvU3RyaW5nIiwiZmFsbGJhY2siLCJnZXRTdGF0aWNQcm9wcyIsImNvbnRleHQiLCJwcm9wcyIsImR1YUxpc3QiLCJkdWEiLCJkdWFOYW1lIiwidGl0bGUiLCJEdWFMaXN0Iiwicm91dGVyIiwicHgiLCJweSIsImFyaWEtbGFiZWwiLCJ2YXJpYW50IiwiaWNvbiIsInNpemUiLCJvbkNsaWNrIiwicHVzaCIsImFzIiwidGV4dEFsaWduIiwibXkiLCJtYXhXIiwibXgiLCJzcGFjaW5nIiwiaXRlbSIsImluZGV4IiwiYmciLCJib3JkZXJSYWRpdXMiLCJkaXIiLCJ0ZXh0U3R5bGUiLCJhcmFiaWMiLCJ0cmFuc2xpdGVyYXRpb24iLCJib3JkZXJXaWR0aCIsImJvcmRlckNvbG9yIiwidHJhbnNsYXRpb24iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/dua/[id].tsx\n");
 
 /***/ }),
 
-/***/ 4513:
+/***/ "@chakra-ui/icons":
+/*!***********************************!*\
+  !*** external "@chakra-ui/icons" ***!
+  \***********************************/
 /***/ ((module) => {
 
 module.exports = require("@chakra-ui/icons");
 
 /***/ }),
 
-/***/ 8930:
+/***/ "@chakra-ui/react":
+/*!***********************************!*\
+  !*** external "@chakra-ui/react" ***!
+  \***********************************/
 /***/ ((module) => {
 
 module.exports = require("@chakra-ui/react");
 
 /***/ }),
 
-/***/ 1853:
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
 /***/ ((module) => {
 
 module.exports = require("next/router");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+module.exports = require("react/jsx-dev-runtime");
 
 /***/ })
 
@@ -149,7 +70,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(4281));
+var __webpack_exports__ = (__webpack_exec__("./pages/dua/[id].tsx"));
 module.exports = __webpack_exports__;
 
 })();
