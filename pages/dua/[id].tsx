@@ -10,14 +10,25 @@ import {
 import { NextPage } from "next"
 import { useRouter } from "next/router"
 
+import { db } from "../../firebase/init"
+import { ref, child, get } from "firebase/database"
+
 export const getStaticPaths = async () => {
-    const res = await fetch("http://localhost:8000/dua/")
-    const data = await res.json()
+    let data: [] = []
+
+    try {
+        const dbRef = ref(db)
+        await get(child(dbRef, `dua`)).then((snapshot) => {
+            data = snapshot.val()
+        })
+    } catch (err) {
+        console.log(err)
+    }
 
     // map data to an array of path objects with params (id)
-    const paths = data.map((ninja: { id: { toString: () => any } }) => {
+    const paths = data.map((item: { id: { toString: () => any } }) => {
         return {
-            params: { id: ninja.id.toString() },
+            params: { id: item.id.toString() },
         }
     })
 
@@ -28,40 +39,52 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context: { params: { id: any } }) => {
-    const id = context.params.id
-    const res = await fetch("http://localhost:8000/dua/" + id)
-    const data = await res.json()
+    const id = context.params.id - 1
+
+    let data: any = []
+
+    try {
+        const dbRef = ref(db)
+        await get(child(dbRef, `dua/${id}`)).then((snapshot) => {
+            data.push(snapshot.val())
+        })
+    } catch (error) {
+        console.log(error)
+    }
 
     return {
-        props: { duaList: data.dua, duaName: data.title },
+        props: { duaList: data[0] },
     }
 }
 type Props = {
-    duaList: [
-        item: {
-            arabic: string
-            transliteration: string
-            translation: string
-        }
-    ]
-    duaName: string
+    duaList: {
+        id: number
+        title: string
+        dua: [
+            item: {
+                arabic: string
+                transliteration: string
+                translation: string
+            }
+        ]
+    }
 }
-const DuaList: NextPage<Props> = ({ duaList, duaName }) => {
+const DuaList: NextPage<Props> = ({ duaList }) => {
     const router = useRouter()
     return (
         <Box px={4} py={12}>
-            <IconButton 
-            aria-label="back_button"
-            variant="ghost"
-            icon={<ArrowBackIcon />}
-            size='lg'
-            onClick={() => router.push('/chapters')}
+            <IconButton
+                aria-label="back_button"
+                variant="ghost"
+                icon={<ArrowBackIcon />}
+                size="lg"
+                onClick={() => router.push("/chapters")}
             />
             <Heading as="h2" size="lg" textAlign="center" my={8}>
-                {duaName}
+                {`${duaList.id} - ${duaList.title}`}
             </Heading>
             <VStack maxW={["xl"]} mx="auto" spacing={6}>
-                {duaList.map((item, index) => (
+                {duaList.dua.map((item, index) => (
                     <VStack py={4} px={4} spacing={4} key={index}>
                         <Box
                             bg="blackAlpha.500"

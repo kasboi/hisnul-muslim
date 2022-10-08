@@ -11,19 +11,31 @@ import {
     LinkOverlay,
 } from "@chakra-ui/react"
 import { NextPage } from "next"
+import { db } from "../../firebase/init"
+import { ref, onValue, child, get } from "firebase/database"
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:8000/dua/")
-    const data = await res.json()
+
+    let data: { id: any; title: any }[] = []
+
+    try {
+        const duaRef = ref(db, "dua")
+        onValue(duaRef, (snapshot) => {
+            data = snapshot.val()
+        })
+    } catch (error) {
+        console.error(error)
+    }
 
     const chaps = data.map((item: { id: any; title: any }) => {
         return {
-            id: item.id, title: item.title
+            id: item.id,
+            title: item.title,
         }
     })
 
-    return { 
-        props: { chaps }
+    return {
+        props: { chaps },
     }
 }
 
@@ -37,7 +49,7 @@ const Chapters: NextPage = ({ chaps }: any) => {
                         <LinkBox as="article" key={i}>
                             <HStack spacing={[4, 6]}>
                                 <Tag size={"sm"}>{item.id}</Tag>
-                                <NextLink href={`/dua/${item.id}`} passHref>
+                                <NextLink href={`/dua/${item.id - 1}`} passHref>
                                     <LinkOverlay>
                                         <Text fontSize="lg">{item.title}</Text>
                                     </LinkOverlay>
@@ -52,3 +64,9 @@ const Chapters: NextPage = ({ chaps }: any) => {
 }
 
 export default Chapters
+
+
+const dbRef = ref(db)
+get(child(dbRef, `dua/0`)).then((snapshot) => {
+    console.log(snapshot.val())
+})
