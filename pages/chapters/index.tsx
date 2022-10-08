@@ -19,10 +19,11 @@ export const getStaticProps = async () => {
     let data: { id: any; title: any }[] = []
 
     try {
-        const duaRef = ref(db, "dua")
-        onValue(duaRef, (snapshot) => {
+        const dbRef = ref(db)
+        await get(child(dbRef, `dua`)).then((snapshot) => {
             data = snapshot.val()
         })
+        
     } catch (error) {
         console.error(error)
     }
@@ -49,7 +50,7 @@ const Chapters: NextPage = ({ chaps }: any) => {
                         <LinkBox as="article" key={i}>
                             <HStack spacing={[4, 6]}>
                                 <Tag size={"sm"}>{item.id}</Tag>
-                                <NextLink href={`/dua/${item.id - 1}`} passHref>
+                                <NextLink href={`/dua/${item.id}`} passHref>
                                     <LinkOverlay>
                                         <Text fontSize="lg">{item.title}</Text>
                                     </LinkOverlay>
