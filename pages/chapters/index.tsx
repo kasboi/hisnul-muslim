@@ -63,11 +63,4 @@ const Chapters: NextPage = ({ chaps }: any) => {
         </Container>
     )
 }
-
 export default Chapters
-
-
-const dbRef = ref(db)
-get(child(dbRef, `dua/0`)).then((snapshot) => {
-    console.log(snapshot.val())
-})

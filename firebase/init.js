@@ -8,14 +8,14 @@ import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDS_p6QMRpQb_8cmvcc_mbY7HlphLbV8pk",
-  authDomain: "citadel-of-the-believer.firebaseapp.com",
-  databaseURL: "https://citadel-of-the-believer-default-rtdb.firebaseio.com",
-  projectId: "citadel-of-the-believer",
-  storageBucket: "citadel-of-the-believer.appspot.com",
-  messagingSenderId: "733366659244",
-  appId: "1:733366659244:web:f628766ba9cddb3794d709",
-  measurementId: "G-26DP3EQG6L"
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.FIREBASE_AUTHDOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASEURL,
+  projectId: process.env.FIREBASE_PROJECTID,
+  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.FIREBASE_APPID,
+  measurementId: process.env.FIREBASE_MEASUREMENTID,
 };
 
 // Initialize Firebase
